@@ -1,6 +1,27 @@
 ---
-title: Happy Bday Divy
-publish_date: 2022-07-23
+title: My First blog post
+publish_date: 2022-06-13
 ---
 
-Hi Divy!
+## Hi!
+
+```asm
+global _start
+
+section .text
+
+_start:
+  mov rax, 1        ; write(
+  mov rdi, 1        ;   STDOUT_FILENO,
+  mov rsi, msg      ;   "Hello, world!\n",
+  mov rdx, msglen   ;   sizeof("Hello, world!\n")
+  syscall           ; );
+
+  mov rax, 60       ; exit(
+  mov rdi, 0        ;   EXIT_SUCCESS
+  syscall           ; );
+
+section .rodata
+  msg: db "Hello, world!", 10
+  msglen: equ $ - msg
+```
