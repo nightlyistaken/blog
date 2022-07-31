@@ -4,7 +4,7 @@ blog({
   title: "Nightly",
   author: "Nightly",
   avatar: "./nightly.png",
-  avatarClass: "full",
+  avatarClass: "half",
   links: [
     { title: "Email", url: "mailto:dhairysrivastava5@gmail.com" },
     { title: "GitHub", url: "https://github.com/dhairy-online" },
